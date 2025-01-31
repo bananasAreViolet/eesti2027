@@ -68,7 +68,7 @@
 <body>
     <div class="container">
         <h1>Eesti 2027</h1>
-        <canvas id="pollChart" width="300" height="150"></canvas>
+        <canvas id="pollChart" width="300px" height="150px"></canvas>
      <script>
         const pollData = [
             { party: "Isamaa", support: 26.90 },
@@ -106,7 +106,16 @@
                         '#F55A60'  // Color for EÜVP
                       ]
                     }]
+                },
+                options: {
+        responsive: false,  // Disable responsive resizing
+        maintainAspectRatio: false,  // Prevent aspect ratio distortion
+        plugins: {
+            legend: {
+                display: false // Hide the legend
                 }
+        }
+    }
             });
         }
         createChart();
