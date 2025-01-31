@@ -64,7 +64,7 @@
         .parem { color: #F39A00; font-weight: bold; }
             .parembg { background: #F39A00; color: white; font-weight: bold; }
     </style>
-    <canvas id="pollChart" width="400" height="200"></canvas>
+    <canvas id="pollChart"></canvas>
      <script>
         const pollData = [
             { party: "Isamaa", support: 26.90 },
@@ -89,7 +89,19 @@
                     datasets: [{
                         label: '',
                         data: pollData.map(p => p.support),
-                        backgroundColor: ['#84BCED', '#FAED57', '#B88E72', '#E25D5E', '#70A48F', '#F49557', '#575757', '#BCDC7B', '#D7C262', '#F55A60']
+                        backgroundColor: [
+                        '#84BCED', // Color for Isamaa
+                        '#FAED57', // Color for Reform
+                        '#B88E72', // Color for EKRE
+                        '#E25D5E', // Color for SDE
+                        '#70A48F', // Color for Centre
+                        '#F49557', // Color for Parem
+                        '#7A6FBA', // Color for E200
+                        '#575757', // Color for Koos
+                        '#BCDC7B', // Color for Greens
+                        '#D7C262', // Color for ERK
+                        '#F55A60'  // Color for EÜVP
+                      ]
                     }]
                 }
             });
