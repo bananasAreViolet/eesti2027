@@ -63,6 +63,46 @@
         .parem { color: #F39A00; font-weight: bold; }
             .parembg { background: #F39A00; color: white; font-weight: bold; }
     </style>
+     <script>
+        const pollData = [
+            { party: "Isamaa", support: 26.90 },
+            { party: "Reform", support: 17.46 },
+            { party: "EKRE", support: 14.19 },
+            { party: "SDE", support: 13.71 },
+            { party: "Centre", support: 13.63 },
+            { party: "Parem", support: 6.62 },
+            { party: "E200", support: 3.04 },
+            { party: "Koos", support: 2.00 },
+            { party: "Greens", support: 1.72 },
+            { party: "ERK", support: 0.74 },
+            { party: "EÜVP", support: 0.00 }
+        ];
+
+        function populateTable() {
+            const table = document.getElementById("pollTable");
+            pollData.forEach(row => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `<td>${row.party}</td><td>${row.support}%</td>`;
+                table.appendChild(tr);
+            });
+        }
+
+        function createChart() {
+            const ctx = document.getElementById('pollChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: pollData.map(p => p.party),
+                    datasets: [{
+                        label: '',
+                        data: pollData.map(p => p.support),
+                        backgroundColor: ['#84BCED', '#FAED57', '#B88E72', '#E25D5E', '#70A48F', '#F49557', '#575757', '#BCDC7B', '#D7C262', '#F55A60']
+                    }]
+                }
+            });
+        }
+        createChart();
+    </script>
 </head>
 <body>
     <div class="container">
