@@ -19,6 +19,8 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        .chart-container {
+        }
         }
         .summary {
             font-size: 16px;
@@ -40,6 +42,7 @@
             display: flex;
             justify-content: space-between;
             gap: 20px;
+            margin: 0 auto;
         }
         .chart-container div {
             flex: 1;
@@ -68,7 +71,7 @@
 <body>
     <div class="container">
         <h1>Eesti 2027</h1>
-        <canvas id="pollChart" margin: 0 auto;></canvas>
+        <canvas id="pollChart"></canvas>
      <script>
         const pollData = [
             { party: "Isamaa", support: 26.90 },
