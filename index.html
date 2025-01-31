@@ -78,15 +78,6 @@
             { party: "EÜVP", support: 0.00 }
         ];
 
-        function populateTable() {
-            const table = document.getElementById("pollTable");
-            pollData.forEach(row => {
-                const tr = document.createElement("tr");
-                tr.innerHTML = `<td>${row.party}</td><td>${row.support}%</td>`;
-                table.appendChild(tr);
-            });
-        }
-
         function createChart() {
             const ctx = document.getElementById('pollChart').getContext('2d');
             new Chart(ctx, {
