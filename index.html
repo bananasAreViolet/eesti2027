@@ -64,7 +64,11 @@
         .parem { color: #F39A00; font-weight: bold; }
             .parembg { background: #F39A00; color: white; font-weight: bold; }
     </style>
-    <canvas id="pollChart"></canvas>
+</head>
+<body>
+    <div class="container">
+        <h1>Eesti 2027</h1>
+        <canvas id="pollChart"></canvas>
      <script>
         const pollData = [
             { party: "Isamaa", support: 26.90 },
@@ -108,10 +112,6 @@
         }
         createChart();
     </script>
-</head>
-<body>
-    <div class="container">
-        <h1>Eesti 2027</h1>
         <div class="summary">
             <h2>Freshest Update</h2>
             <p style="text-align: center;"><strong>Last updated: 30 January 2025</strong></p>
