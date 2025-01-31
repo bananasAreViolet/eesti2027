@@ -68,7 +68,7 @@
 <body>
     <div class="container">
         <h1>Eesti 2027</h1>
-        <canvas id="pollChart"></canvas>
+        <canvas id="pollChart" width="300" height="150"></canvas>
      <script>
         const pollData = [
             { party: "Isamaa", support: 26.90 },
@@ -91,7 +91,6 @@
                 data: {
                     labels: pollData.map(p => p.party),
                     datasets: [{
-                        label: '',
                         data: pollData.map(p => p.support),
                         backgroundColor: [
                         '#84BCED', // Color for Isamaa
