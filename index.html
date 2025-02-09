@@ -75,57 +75,6 @@
         <div class="chart-container">
         <canvas id="pollChart"></canvas>
             </div>
-     <script>
-        const pollData = [
-            { party: "Isamaa", support: 26.90 },
-            { party: "Reform", support: 17.46 },
-            { party: "EKRE", support: 14.19 },
-            { party: "SDE", support: 13.71 },
-            { party: "Centre", support: 13.63 },
-            { party: "Parem", support: 6.62 },
-            { party: "E200", support: 3.04 },
-            { party: "Koos", support: 2.00 },
-            { party: "Greens", support: 1.72 },
-            { party: "ERK", support: 0.74 },
-            { party: "EÜVP", support: 0.00 }
-        ];
-
-        function createChart() {
-            const ctx = document.getElementById('pollChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: pollData.map(p => p.party),
-                    datasets: [{
-                        data: pollData.map(p => p.support),
-                        backgroundColor: [
-                        '#84BCED', // Color for Isamaa
-                        '#FAED57', // Color for Reform
-                        '#B88E72', // Color for EKRE
-                        '#E25D5E', // Color for SDE
-                        '#70A48F', // Color for Centre
-                        '#F49557', // Color for Parem
-                        '#7A6FBA', // Color for E200
-                        '#575757', // Color for Koos
-                        '#BCDC7B', // Color for Greens
-                        '#D7C262', // Color for ERK
-                        '#F55A60'  // Color for EÜVP
-                      ]
-                    }]
-                },
-                options: {
-        responsive: false,  // Disable responsive resizing
-        maintainAspectRatio: false,  // Prevent aspect ratio distortion
-        plugins: {
-            legend: {
-                display: false // Hide the legend
-                }
-        }
-    }
-            });
-        }
-        createChart();
-    </script>
         <div class="summary">
             <h2>Freshest Update</h2>
             <p style="text-align: center;"><strong>Last updated: 30 January 2025</strong></p>
